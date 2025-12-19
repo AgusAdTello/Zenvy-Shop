@@ -1,56 +1,57 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+Zenvy Shop 🚀
+Zenvy Shop es una plataforma de e-commerce moderna diseñada para el mercado de dropshipping internacional. El proyecto combina una interfaz de usuario rápida y elegante con una gestión de estado robusta para ofrecer una experiencia de compra fluida.
 
-## Getting Started
+🛠️ Tecnologías Usadas
+El proyecto utiliza un stack tecnológico de vanguardia para asegurar escalabilidad y rendimiento:
 
-First, run the development server:
+Next.js (App Router): Framework de React para el renderizado del lado del servidor (SSR) y generación de sitios estáticos.
 
-```bash
+TypeScript: Tipado estricto para un código más seguro y fácil de mantener, definiendo interfaces claras para productos y el carrito.
+
+Redux Toolkit: Gestión de estado global para manejar el carrito de compras de manera eficiente.
+
+Tailwind CSS: Framework de CSS para un diseño responsivo y moderno.
+
+Lucide React: Biblioteca de iconos consistentes y ligeros.
+
+Sonner: Notificaciones (toasts) elegantes para mejorar el feedback del usuario.
+
+✨ Características Actuales
+Catálogo de Productos: Visualización dinámica de productos con datos centralizados.
+
+Páginas de Detalle: Rutas dinámicas para cada producto (/products/[id]) con selección de variantes (talles y colores).
+
+Carrito de Compras: Sistema completo de agregado, eliminación y cálculo de totales.
+
+Persistencia de Datos: Integración con localStorage para que el carrito se mantenga tras recargar la página.
+
+Diseño Responsivo: Totalmente optimizado para dispositivos móviles y escritorio.
+
+🔮 Visión a Futuro (Roadmap)
+Este proyecto está diseñado para evolucionar hacia un modelo de negocio de Dropshipping Internacional totalmente automatizado:
+
+Integración con Stripe: Pasarela de pagos segura para procesar transacciones reales.
+
+Conexión con Proveedores (API): Sincronización automática de productos y stock con proveedores como Printful o Printify.
+
+Automatización de Pedidos: Sistema que envía la orden de compra directamente al proveedor una vez confirmado el pago, eliminando la necesidad de gestionar inventario físico.
+
+Panel de Administración: Gestión de pedidos y métricas de ventas.
+
+🚀 Instalación y Uso
+Clona el repositorio:
+
+Bash
+
+git clone https://github.com/tu-usuario/zenvy-shop.git
+Instala las dependencias:
+
+Bash
+
+npm install
+Inicia el servidor de desarrollo:
+
+Bash
+
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-
-
-src/
-├── app/                  # Rutas de la aplicación (Next.js App Router)
-│   ├── (shop)/           # Agrupación de rutas de la tienda (Home, Producto)
-│   ├── (checkout)/       # Rutas de pago (diseño más limpio, sin distracciones)
-│   ├── api/              # TU BACKEND (Webhooks de Stripe y Printful)
-│   └── layout.tsx        # El marco principal (Navbar, Footer)
-├── components/
-│   ├── ui/               # Botones, Inputs (Componentes de Shadcn)
-│   ├── commerce/         # ProductCard, CartDrawer, PriceTag
-│   └── layout/           # Navbar, Footer
-├── lib/                  # Utilidades y configuraciones
-│   ├── stripe.ts         # Configuración de Stripe
-│   ├── printful.ts       # Cliente de la API de Printful
-│   └── utils.ts          # Helpers
-├── redux/                # Estado Global
-│   ├── store.ts
-│   └── features/         # Slices (Cart, User)
-└── types/                # Definiciones de TypeScript (Interfaces de Producto, Orden)
+Abre http://localhost:3000 en tu navegador.
