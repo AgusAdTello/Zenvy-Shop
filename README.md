@@ -1,57 +1,62 @@
-Zenvy Shop 🚀
-Zenvy Shop es una plataforma de e-commerce moderna diseñada para el mercado de dropshipping internacional. El proyecto combina una interfaz de usuario rápida y elegante con una gestión de estado robusta para ofrecer una experiencia de compra fluida.
+# Zenvy Shop 🚀
 
-🛠️ Tecnologías Usadas
-El proyecto utiliza un stack tecnológico de vanguardia para asegurar escalabilidad y rendimiento:
+**Zenvy Shop** es una plataforma de e-commerce de alto rendimiento, diseñada específicamente para el ecosistema de **Dropshipping Internacional**. Combina una arquitectura moderna en el frontend con una gestión de estado robusta para ofrecer una experiencia de usuario (UX) fluida, rápida y profesional.
 
-Next.js (App Router): Framework de React para el renderizado del lado del servidor (SSR) y generación de sitios estáticos.
+---
 
-TypeScript: Tipado estricto para un código más seguro y fácil de mantener, definiendo interfaces claras para productos y el carrito.
+## 🛠️ Stack Tecnológico
 
-Redux Toolkit: Gestión de estado global para manejar el carrito de compras de manera eficiente.
+El proyecto está construido con las tecnologías más demandadas de la industria para asegurar escalabilidad y un SEO optimizado:
 
-Tailwind CSS: Framework de CSS para un diseño responsivo y moderno.
+* **Next.js 15 (App Router)**: Framework líder para React con renderizado híbrido y optimización de rutas.
+* **TypeScript**: Tipado estricto en todo el proyecto para minimizar errores en tiempo de ejecución.
+* **Redux Toolkit**: Gestión centralizada del estado global (Carrito de compras).
+* **Tailwind CSS**: Estilizado responsivo y moderno basado en utilidades.
+* **Lucide React**: Set de iconos vectoriales consistentes.
+* **Sonner**: Sistema de notificaciones (Toasts) de alta calidad para feedback en tiempo real.
 
-Lucide React: Biblioteca de iconos consistentes y ligeros.
+---
 
-Sonner: Notificaciones (toasts) elegantes para mejorar el feedback del usuario.
+## ✨ Características Principales
 
-✨ Características Actuales
-Catálogo de Productos: Visualización dinámica de productos con datos centralizados.
+### ✅ Implementadas actualmente
+* **Catálogo Dinámico**: Listado de productos con carga optimizada desde una fuente de datos centralizada.
+* **Rutas Dinámicas (`/products/[id]`)**: Páginas individuales para cada producto con selección de variantes (talles/colores).
+* **Carrito de Compras Pro**: Lógica completa para agregar, eliminar y calcular subtotales de forma precisa.
+* **Persistencia (LocalStorage)**: El carrito sobrevive a las recargas de página gracias a la sincronización con el almacenamiento local.
+* **Feedback Visual Pro**: Notificaciones elegantes al realizar acciones y estados de carga refinados.
 
-Páginas de Detalle: Rutas dinámicas para cada producto (/products/[id]) con selección de variantes (talles y colores).
+---
 
-Carrito de Compras: Sistema completo de agregado, eliminación y cálculo de totales.
+## 🔮 Roadmap: El Futuro de Zenvy
 
-Persistencia de Datos: Integración con localStorage para que el carrito se mantenga tras recargar la página.
+Este proyecto es la base de un sistema automatizado de ventas globales:
 
-Diseño Responsivo: Totalmente optimizado para dispositivos móviles y escritorio.
+1.  **Pasarela de Pagos con Stripe**: Integración segura para procesar transacciones internacionales.
+2.  **Sincronización con Printful/Printify**: Conexión mediante API para importar productos, diseños y stock en tiempo real.
+3.  **Automatización de Pedidos**: Sistema "Hands-off" donde cada venta dispara automáticamente la orden de producción y envío al proveedor.
+4.  **Dashboard de Métricas**: Panel interno para seguir ventas, productos más populares y márgenes de ganancia.
 
-🔮 Visión a Futuro (Roadmap)
-Este proyecto está diseñado para evolucionar hacia un modelo de negocio de Dropshipping Internacional totalmente automatizado:
+---
 
-Integración con Stripe: Pasarela de pagos segura para procesar transacciones reales.
+## 🚀 Instalación y Desarrollo
 
-Conexión con Proveedores (API): Sincronización automática de productos y stock con proveedores como Printful o Printify.
+Para ejecutar este proyecto localmente:
 
-Automatización de Pedidos: Sistema que envía la orden de compra directamente al proveedor una vez confirmado el pago, eliminando la necesidad de gestionar inventario físico.
+1.  **Clonar el repositorio**:
+    ```bash
+    git clone [https://github.com/tu-usuario/zenvy-shop.git](https://github.com/tu-usuario/zenvy-shop.git)
+    ```
+2.  **Instalar dependencias**:
+    ```bash
+    npm install
+    ```
+3.  **Correr el servidor de desarrollo**:
+    ```bash
+    npm run dev
+    ```
+4.  **Acceder a la app**: Abre [http://localhost:3000](http://localhost:3000) en tu navegador.
 
-Panel de Administración: Gestión de pedidos y métricas de ventas.
+---
 
-🚀 Instalación y Uso
-Clona el repositorio:
-
-Bash
-
-git clone https://github.com/tu-usuario/zenvy-shop.git
-Instala las dependencias:
-
-Bash
-
-npm install
-Inicia el servidor de desarrollo:
-
-Bash
-
-npm run dev
-Abre http://localhost:3000 en tu navegador.
+Desarrollado por **Agustín Tello** 
