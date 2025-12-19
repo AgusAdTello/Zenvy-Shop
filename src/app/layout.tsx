@@ -3,17 +3,15 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { Providers } from "@/components/Providers";
 import Navbar from "@/components/layout/Navbar";
+import { Toaster } from 'sonner'; // 1. Importar Toaster
 
-// 1. Configuramos la fuente
 const inter = Inter({ subsets: ["latin"] });
 
-// 2. Configuramos el título de la página (SEO)
 export const metadata: Metadata = {
   title: "Zenvy Shop",
   description: "Tienda exclusiva",
 };
 
-// 3. Definimos la estructura principal (SOLO UNA VEZ)
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -25,6 +23,8 @@ export default function RootLayout({
         <Providers>
           <Navbar />
           {children}
+          {/* 2. Agregar el componente Toaster con estilo profesional */}
+          <Toaster position="top-right" richColors closeButton />
         </Providers>
       </body>
     </html>

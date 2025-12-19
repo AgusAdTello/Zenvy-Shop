@@ -1,10 +1,11 @@
 'use client';
 
 import Image from 'next/image';
-import Link from 'next/link'; // Importante para la navegación
-import { Product } from '@/types';
-import { useAppDispatch } from '@/redux/hooks';
-import { addToCart } from '@/redux/features/cartSlice';
+import Link from 'next/link'; // Importante para la navegación profesional
+import { toast } from 'sonner'; // Importamos la librería de notificaciones
+import { Product } from '@/types'; // Importamos tu interfaz profesional
+import { useAppDispatch } from '@/redux/hooks'; // Hook personalizado de Redux
+import { addToCart } from '@/redux/features/cartSlice'; // Acción para el carrito
 import { ShoppingBag } from 'lucide-react';
 
 interface ProductCardProps {
@@ -15,7 +16,7 @@ export default function ProductCard({ product }: ProductCardProps) {
   const dispatch = useAppDispatch();
 
   const handleAddToCart = () => {
-    // Seleccionamos la primera variante por defecto al agregar desde la Home
+    // Al agregar desde la Home, seleccionamos la primera variante por defecto
     const defaultVariant = product.variants[0];
 
     dispatch(addToCart({
@@ -23,12 +24,19 @@ export default function ProductCard({ product }: ProductCardProps) {
       quantity: 1,
       selectedVariantId: defaultVariant.id,
     }));
+
+    // LANZAMOS EL TOAST (Notificación flotante)
+    toast.success('¡Agregado al carrito!', {
+      description: `${product.name}`,
+      duration: 2000,
+      icon: <ShoppingBag size={16} className="text-green-500" />,
+    });
   };
 
   return (
     <div className="group relative bg-white border border-gray-200 rounded-xl overflow-hidden hover:shadow-lg transition-shadow duration-300 flex flex-col">
       
-      {/* 1. Imagen del Producto envuelta en Link */}
+      {/* 1. Imagen del Producto envuelta en Link para navegación */}
       <Link href={`/products/${product.id}`} className="block overflow-hidden">
         <div className="aspect-square relative bg-gray-100 overflow-hidden cursor-pointer">
           <Image 
@@ -44,7 +52,7 @@ export default function ProductCard({ product }: ProductCardProps) {
       {/* 2. Info del Producto */}
       <div className="p-4 flex flex-col flex-grow">
         
-        {/* Título envuelto en Link para navegación */}
+        {/* Título con Link y efecto hover */}
         <Link href={`/products/${product.id}`}>
           <h3 className="text-lg font-semibold text-gray-900 truncate hover:text-indigo-600 transition-colors cursor-pointer">
             {product.name}
@@ -60,10 +68,10 @@ export default function ProductCard({ product }: ProductCardProps) {
             ${product.price.toFixed(2)}
           </span>
           
-          {/* Botón de Agregar */}
+          {/* Botón de Agregar con feedback visual activo */}
           <button 
             onClick={handleAddToCart}
-            className="flex items-center gap-2 bg-black text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-gray-800 active:scale-95 transition-all"
+            className="flex items-center gap-2 bg-black text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-gray-800 active:scale-95 transition-all shadow-sm"
           >
             <ShoppingBag size={16} />
             Agregar
